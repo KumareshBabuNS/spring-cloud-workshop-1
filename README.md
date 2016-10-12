@@ -25,8 +25,8 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 2. Add a JPA Entity class named `Contact` with below attributes and a no argument constructor, I'm using `@Data` from [Lombok](https://projectlombok.org/) below, to make the code cleaner. 
 
     ```java
-    @Entity
-    @Data @NoArgsConstructor
+    @Entity // JPA
+    @Data @NoArgsConstructor // Lombok
     class Contact{
     	@Id @GeneratedValue // simple JPA staff
     	Long id;
@@ -88,7 +88,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
     cf restart cna-service
     ```
 
-10. Do you notice that it is not necessary to specify any host/port/credential of the database? The action bind-service does all of those. 
+10. Do you notice that it is not necessary to specify any host/port/credential of the database? The action bind-service does all of those, give you a 'It just works!' experience.
 
 ---
 
@@ -213,4 +213,3 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 ###Remarks:
 
 + Feel free to contact me by dwong@pivotal.io if any enquiry
-+ 
