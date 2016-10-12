@@ -10,7 +10,7 @@ Welcome to Pivotal Cloud Native Workshop, we will use this repository for Spring
 
 ---
 
-To save your time and resources, Config server, Eureka, Hystrix Dashboard and Turbine have been always setup and configurated in both provider and consumer projects. 
+To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zipkin have been always setup and configurated in both provider and consumer projects. 
 
 ##Lab 1 - create a simple backend microservice, let's call it a provider app, with a database, a table, and RESTful API
 
@@ -230,7 +230,10 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 
 4. Take a look at [Zipkin](http://cna-zipkin.cfapps.io)
 
-###Remarks:
+    ![Image of Zipkin](./images/zipkin.png)
 
+---
+
+Remarks:
 + Feel free to contact me by dwong@pivotal.io if any enquiry
 + Further reading: Zuul, Spring Cloud Contract, Spring Rest Docs
