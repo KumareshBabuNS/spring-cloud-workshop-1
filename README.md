@@ -237,4 +237,3 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 
 Remarks:
 + Feel free to contact me by dwong@pivotal.io if any enquiry
-+ Further reading: Zuul, Spring Cloud Contract, Spring Rest Docs
