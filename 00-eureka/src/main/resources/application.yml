@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cna-eureka
+eureka:
+  client:
+    register-with-eureka: false
+server:
+  port: ${PORT:8761}

@@ -1,0 +1,6 @@
+---
+applications:
+- name: cna-turbine
+  memory: 768MB
+  host: cna-turbine
+  path: target/cna-turbine-0.0.1-SNAPSHOT.jar

@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: cna-hystrix
+server:
+  port: 8000

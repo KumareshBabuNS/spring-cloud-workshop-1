@@ -1,0 +1,8 @@
+---
+applications:
+- name: cna-eureka
+  memory: 768MB
+  host: cna-eureka
+  path: target/cna-eureka-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud

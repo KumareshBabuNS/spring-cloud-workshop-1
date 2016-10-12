@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: cna-turbine
+server:
+  port: ${PORT:8008}
+turbine:
+  clusterNameExpression: "'default'"
+  appConfig: cna-consumer
+

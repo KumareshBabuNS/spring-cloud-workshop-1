@@ -1,0 +1,20 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+greeting:
+  message: Hi local!
+info:
+  app:
+    name: cna-service
+    description: A Provider App
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    instanceId: ${vcap.application.application_uris[0]}
+    hostname: ${vcap.application.application_uris[0]}
+    non-secure-port: 80
+    appname: ${vcap.application.application_name}

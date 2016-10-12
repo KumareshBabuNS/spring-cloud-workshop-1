@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: cna-provider
+  jpa:
+    hibernate:
+      ddl-auto: update
+server:
+  port: ${PORT:8080}
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+info:
+  app:
+    name: cna-provider
+    description: A Provider App
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    instanceId: ${vcap.application.application_uris[0]}
+    hostname: ${vcap.application.application_uris[0]}
+    non-secure-port: 80
+    appname: ${vcap.application.application_name}

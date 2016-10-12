@@ -1,0 +1,10 @@
+---
+applications:
+- name: cna-consumer
+  memory: 768MB
+  host: cna-consumer
+  path: target/cna-consumer-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+  services:
+  - eureka-service
