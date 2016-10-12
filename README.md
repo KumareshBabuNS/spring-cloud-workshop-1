@@ -216,11 +216,12 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
     ```java
     @Bean
     public AlwaysSampler defaultSampler() {
-        return new AlwaysSampler();
+      // use always sampler here, but in production environment you want not want to keep every single trace 
+      return new AlwaysSampler();
     }
     ```
 
-2. re-package and push
+2. re-package and push for both provider and consumer
 
     ```bash
     ./mvnw clean package && cf push 
