@@ -51,13 +51,13 @@ Welcome to Pivotal Cloud Native Workshop, we will use this repository for Spring
     ./mvnw clean package 
     ```
 
-5. run `cf push` to push the app (cf cli read the content in manifest.yml, save you a bit of typing)
-
 5. Create an User Provided Service by
 
     ```bash
     cf cups eureka-service -p '{"uri":"http://cna-eureka-service.cfapps.io"}'
     ```
+
+5. run `cf push` to push the app (cf cli read the content in manifest.yml, save you a bit of typing)
 
 6. Check the [Apps Manager](https://console.run.pivotal.io) 
 
