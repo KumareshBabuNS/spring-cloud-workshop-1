@@ -40,7 +40,10 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
     ```java
     @RestResource // Standard JPA staff except this annotation. It saves you a lot of effort to create RESTful API. Thanks Spring Data Rest!
     interface ContactRepository extends JpaRepository<Contact, Long>{
+      // if you are familiar with JPA, just add more method here, for example findAllByName. 
+      // it will be appeared in http://your-consumer.cfapps.io/contacts/search
     }
+
     ```
     
 4. To avoid hostname conflict, in manifest.yml, replace the host with your name, for example
