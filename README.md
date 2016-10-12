@@ -10,6 +10,8 @@ Welcome to Pivotal Cloud Native Workshop, we will use this repository for Spring
 
 ---
 
+To save your time and resources, Config server, Eureka, Hystrix Dashboard and Turbine have been always setup and configurated in both provider and consumer projects. 
+
 ##Lab 1 - create a simple backend microservice, let's call it a provider app, with a database, a table, and RESTful API
 
 1. Add below annotation in the main class 

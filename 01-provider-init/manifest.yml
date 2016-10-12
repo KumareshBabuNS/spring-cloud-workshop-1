@@ -1,0 +1,10 @@
+---
+applications:
+- name: cna-provider
+  memory: 768MB
+  host: cna-provider
+  path: target/cna-provider-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+  services:
+  - eureka-service

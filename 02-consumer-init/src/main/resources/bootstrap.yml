@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: cna-consumer
+  cloud:
+    config:
+      uri: http://cna-config.cfapps.io/
+server:
+  port: ${PORT:8070}
