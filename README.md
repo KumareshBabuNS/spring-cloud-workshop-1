@@ -104,9 +104,10 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 3. Add Feign Client to integrate with provider
  
     ```java
-    // The name below within FeignClient is the service name registered in Eureka, 
-    // Feign Client will lookup the address of provider,
-    // imagine there are multiple instances of provider sitting in multiple data center/cloud.
+    // The name within FeignClient is the service name registered in Eureka, 
+    // Feign Client will lookup the address(es) of provider.
+    // Imagine there are multiple instances of provider sitting in multiple data center/cloud,
+    // the client side load balancer (Ribbon) select the best one to consume.
     // If the circuit is open, the fallback class will be invoked.
     // Circuit open means something is wrong, close is normal, remember science class in sec school?
     // Not just try..catch..exception
