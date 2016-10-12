@@ -49,7 +49,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 4. To avoid hostname conflict, in manifest.yml, replace the host with your name, for example
 
     ```yaml
-    host: cna-service-dwong
+    host: cna-provider-dwong
     ```
 
 5. package the app (`mvnw.cmd` for windows)
@@ -84,8 +84,8 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 
     ```bash
     cf create-service cleardb spark contact-db
-    cf bind-service cna-service contact-db
-    cf restart cna-service
+    cf bind-service cna-provider contact-db
+    cf restart cna-provider
     ```
 
 10. Do you notice that it is not necessary to specify any host/port/credential of the database? The action bind-service does all of those, give you a 'It just works!' experience.
@@ -118,7 +118,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
     // If the circuit is open, the fallback class will be invoked.
     // Circuit open means something is wrong, close is normal, remember science class in sec school?
     // Not just try..catch..exception
-    @FeignClient(name = "cna-service", fallback = RemoteServiceFallback.class)
+    @FeignClient(name = "cna-provider", fallback = RemoteServiceFallback.class)
     interface RemoteService{
     
         // The /contacts request mapping below is the HTTP endpoint of provider app
@@ -195,7 +195,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 11. Enter your Hystrix stream of this consumer app, for example
 
     ```
-    http://cna-service-dwong.cfapps.io/hystrix.stream
+    http://cna-provider-dwong.cfapps.io/hystrix.stream
     ```
     
 12. You should see the Hystrix dashboard
