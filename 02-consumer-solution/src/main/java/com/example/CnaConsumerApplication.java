@@ -10,6 +10,8 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.feign.EnableFeignClients;
 import org.springframework.cloud.netflix.feign.FeignClient;
+import org.springframework.cloud.sleuth.sampler.AlwaysSampler;
+import org.springframework.context.annotation.Bean;
 import org.springframework.hateoas.Resources;
 import org.springframework.hateoas.config.EnableHypermediaSupport;
 import org.springframework.stereotype.Component;
@@ -27,6 +29,11 @@ import java.util.stream.Collectors;
 @EnableDiscoveryClient
 @SpringBootApplication
 public class CnaConsumerApplication {
+
+	@Bean
+	public AlwaysSampler defaultSampler() {
+		return new AlwaysSampler();
+	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(CnaConsumerApplication.class, args);

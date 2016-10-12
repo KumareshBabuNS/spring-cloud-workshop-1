@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: cna-provider
   jpa:
     hibernate:
       ddl-auto: update
@@ -17,6 +15,8 @@ info:
 ---
 spring:
   profiles: cloud
+  zipkin:
+    baseUrl: http://cna-zipkin.cfapps.io
 eureka:
   instance:
     instanceId: ${vcap.application.application_uris[0]}

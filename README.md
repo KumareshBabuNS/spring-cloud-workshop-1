@@ -209,7 +209,28 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 15. Restart provide app to see what happen
 
 ---
+##Lab 3 - Distrubuted Tracing
+
+1. add a sampler in main class of both provider and consumer
+
+    ```java
+    @Bean
+    public AlwaysSampler defaultSampler() {
+        return new AlwaysSampler();
+    }
+    ```
+
+2. re-package and push
+
+    ```bash
+    ./mvnw clean package && cf push 
+    ```
+
+3. Create request to consumer `/names` endpoint
+
+4. Take a look at [Zipkin](http://cna-zipkin.cfapps.io)
 
 ###Remarks:
 
 + Feel free to contact me by dwong@pivotal.io if any enquiry
++ Further reading: Zuul, Spring Cloud Contract, Spring Rest Docs

@@ -12,6 +12,8 @@ info:
 ---
 spring:
   profiles: cloud
+  zipkin:
+    baseUrl: http://cna-zipkin.cfapps.io
 eureka:
   instance:
     instanceId: ${vcap.application.application_uris[0]}
