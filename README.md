@@ -14,6 +14,8 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 
 ##Lab 1 - create a simple backend microservice, let's call it a provider app, with a database, a table, and RESTful API
 
+1. Open 01-provider-init with your favourite IDE 
+
 1. Add below annotation in the main class 
 
     ```java
@@ -88,6 +90,8 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Tu
 ---
 
 ##Lab 2 - create another service to consume above microservice, let's call it consumer app
+
+1. Open 02-consumer-init
 
 1. Add below annotations
 
