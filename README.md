@@ -16,7 +16,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 1. Open `01-provider-init` with your favourite IDE 
 
 1. Take a look on `pom.xml`, you will find below dependencies:
-  + `spring-boot-starter-actuator` for metrics, health check, operation, etc
+  + `spring-boot-starter-actuator` for metrics, configuration, jmx, etc
   + `spring-cloud-starter-eureka` for service discovery
   + `spring-boot-starter-data-rest` to quickly expose RESTful API
   + `spring-cloud-starter-sleuth` for distributed tracing
@@ -102,6 +102,11 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 ##Lab 2 - create another service to consume above microservice, let's call it consumer app
 
 1. Open `02-consumer-init`
+
+1. Take a look on `pom.xml`, you can find below dependencies besides Lab 1's 
+  + `spring-cloud-starter-hystrix` for circuit breaker
+  + `spring-boot-starter-hateoas` for parsing HATEOAS response
+  + `spring-cloud-starter-feign` for easily consume provider service
 
 1. Add below annotations
 
