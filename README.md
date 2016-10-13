@@ -6,7 +6,6 @@ Welcome to Pivotal Cloud Native Workshop, we will use this repository for Spring
 2. Get a free [PWS account](https://login.run.pivotal.io/login), we don't mind you swipe your credit card too :)
 3. [CURL](https://curl.haxx.se/download.html) or any browser-based REST client like [this](https://www.getpostman.com/)
 4. JDK 1.8
-5. You can copy and paste, but make sure you read the remark inline
 
 ---
 
@@ -15,6 +14,14 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 ##Lab 1 - create a simple backend microservice, let's call it a provider app, with a database, a table, and RESTful API
 
 1. Open `01-provider-init` with your favourite IDE 
+
+1. Take a look on `pom.xml`, you will find below dependencies:
+  + spring-boot-starter-actuator
+  + spring-cloud-starter-eureka
+  + spring-boot-starter-data-rest
+  + spring-cloud-starter-sleuth
+  + spring-cloud-starter-zipkin
+  + mysql, h2
 
 1. Add below annotation in the main class 
 
