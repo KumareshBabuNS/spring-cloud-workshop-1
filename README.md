@@ -4,7 +4,7 @@ Welcome to Pivotal Cloud Native Workshop, we will use this repository for Spring
 ###Prerequisites
 1. [CF command line tools](https://console.run.pivotal.io/tools) installed and login
 2. Get a free [PWS account](https://login.run.pivotal.io/login), we don't mind you swipe your credit card too :)
-3. [CURL](https://curl.haxx.se/download.html)
+3. [CURL](https://curl.haxx.se/download.html) or any browser-based REST client like [this](https://www.getpostman.com/)
 4. JDK 1.8
 5. You can copy and paste, but make sure you read the remark inline
 
