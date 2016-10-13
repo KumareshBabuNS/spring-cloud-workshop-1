@@ -16,11 +16,11 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 1. Open `01-provider-init` with your favourite IDE 
 
 1. Take a look on `pom.xml`, you will find below dependencies:
-  + spring-boot-starter-actuator
-  + spring-cloud-starter-eureka
-  + spring-boot-starter-data-rest
-  + spring-cloud-starter-sleuth
-  + spring-cloud-starter-zipkin
+  + `spring-boot-starter-actuator` for metrics, health check, operation, etc
+  + `spring-cloud-starter-eureka` for service discovery
+  + `spring-boot-starter-data-rest` to quickly expose RESTful API
+  + `spring-cloud-starter-sleuth` for distributed tracing
+  + `spring-cloud-starter-zipkin` for sending trace to zipkin server
   + mysql, h2
 
 1. Add below annotation in the main class 
