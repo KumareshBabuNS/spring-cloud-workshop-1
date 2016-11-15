@@ -14,7 +14,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 To set the proxy, please add below to mvnw or mvnw.cmd
 
 ```
-set MAVEN_OPTS=-Dhttp.proxyHost=proxy.ha.org.hk -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy.ha.org.hk -Dhttps.proxyPort=8080​
+set MAVEN_OPTS=-Dhttp.proxyHost=proxy.ha.org.hk -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy.ha.org.hk -Dhttps.proxyPort=8080​ -Dproxy.user=user -Dproxy.password=pass
 ```
 
 ##Lab 1 - create a simple backend microservice, let's call it a provider app, with a database, a table, and RESTful API
