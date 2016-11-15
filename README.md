@@ -68,7 +68,7 @@ To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zi
 5. Create an User Provided Service by
 
     ```bash
-    cf cups eureka-service -p '{"uri":"http://cna-eureka-service.cfapps.io"}'
+    cf cups eureka-service -p '{"uri":"http://cna-eureka.cfapps.io"}'
     ```
 
 5. run `cf push` to push the app (cf cli read the content in manifest.yml, save you a bit of typing)
