@@ -11,6 +11,12 @@ Welcome to Pivotal Cloud Native Workshop, we will use this repository for Spring
 
 To save your time and resources, Config server, Eureka, Hystrix Dashboard and Zipkin have been always setup and configurated in both provider and consumer projects. 
 
+To set the proxy, please add below to mvnw or mvnw.cmd
+
+```
+set MAVEN_OPTS=-Dhttp.proxyHost=proxy.ha.org.hk -Dhttp.proxyPort=8080 -Dhttps.proxyHost=proxy.ha.org.hk -Dhttps.proxyPort=8080​
+```
+
 ##Lab 1 - create a simple backend microservice, let's call it a provider app, with a database, a table, and RESTful API
 
 1. Open `01-provider-init` with your favourite IDE 
